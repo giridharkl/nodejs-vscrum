@@ -1,0 +1,33 @@
+﻿extends layout
+
+block content
+    h1= title
+    form.form-horizontal(action='/newnote', method='post')
+        fieldset
+            legend Enter New Meeting Note
+            .form-group
+                label.col-md-4.control-label Name
+                .col-md-6
+                    select.form-control(id='memberName' name='memberName')
+                        option Name1
+            .form-group
+                label.col-md-4.control-label Project
+                .col-md-6
+                    select.form-control(id='project' name='project')
+                        option Project1
+            .form-group
+                label.col-md-4.control-label Yesterday's Work
+                .col-md-6
+                    textarea.form-control(id='workYesterday' name='workYesterday') Yesterday
+            .form-group
+                label.col-md-4.control-label Today's Work
+                .col-md-6
+                    textarea.form-control(id='workToday' name='workToday') Today
+            .form-group
+                label.col-md-4.control-label Any impediments?
+                .col-md-6
+                    textarea.form-control(id='impediments' name='impediments') Impediments
+            .form-group
+                label.col-md-4.control-label Save Note
+                .col-md-4
+                    button.btn.btn-primary(id='btnSaveNote' name='btnSaveNote' type='submit') Save

@@ -1,0 +1,29 @@
+﻿extends layout
+
+block content
+    h1= title
+    form(action='/', method='post')
+        .row.clear-fix
+            .col-md-4.column
+                select.form-control(id='memberName' name='memberName')
+                    option(value='') Select All Memebers
+            .col-md-1.column
+                button.btn.btn-primary(id='btnFilterNote' name='btnFilterNote' type='submit') Filter Note
+    br
+    .col-md-12.column.list-group
+        - for note in notes
+            .list-group-item
+                div 
+                    span Note from #{note.memberName} on #{note.createdOn}
+                div 
+                    strong Project 
+                    span #{note.project}
+                div 
+                    strong Work Yesterday: 
+                    span #{note.workYesterday}
+                div 
+                    strong Work Today: 
+                    span #{note.workToday}
+                div 
+                    strong Impediment: 
+                    span #{note.impediment}
