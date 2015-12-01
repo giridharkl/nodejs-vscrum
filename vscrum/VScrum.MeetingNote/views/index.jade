@@ -6,10 +6,12 @@ block content
         .row.clear-fix
             .col-md-4.column
                 select.form-control(id='memberName' name='memberName')
-                    option(value='') Select All Memebers
+                    -var members
+                    -for name in names
+                     option(value='#{name}') #{name} 
             .col-md-1.column
                 button.btn.btn-primary(id='btnFilterNote' name='btnFilterNote' type='submit') Filter Note
-    br
+    br 
     .col-md-12.column.list-group
         - for note in notes
             .list-group-item

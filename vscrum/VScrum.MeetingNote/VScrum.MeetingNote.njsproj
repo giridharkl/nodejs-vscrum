@@ -33,6 +33,7 @@
     <Compile Include="app.js" />
     <Compile Include="controllers\noteController.js" />
     <Compile Include="models\noteModel.js" />
+    <Compile Include="public\javascripts\vscrum.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\newnote.js" />
     <Compile Include="routes\users.js" />

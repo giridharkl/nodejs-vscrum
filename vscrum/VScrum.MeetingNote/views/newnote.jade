@@ -7,14 +7,22 @@ block content
             legend Enter New Meeting Note
             .form-group
                 label.col-md-4.control-label Name
-                .col-md-6
+                .col-md-3
                     select.form-control(id='memberName' name='memberName')
                         option Name1
+                .col-md-3
+                    input.form-control(placeholder='New Member' id='txtNewMember' name='txtNewMember')
+                .col-md-1
+                    button.form-control.btn.btn-primary(id='btnAddMemeber' name='btnAddMember' onclick='Vscrum.addToSelect("memberName","txtNewMember")' type='button') Add
             .form-group
                 label.col-md-4.control-label Project
-                .col-md-6
+                .col-md-3
                     select.form-control(id='project' name='project')
                         option Project1
+                .col-md-3
+                    input.form-control(placeholder='New Project' id='txtNewProject' name='txtNewProject')
+                .col-md-1
+                    button.form-control.btn.btn-primary(id='btnAddProject' name='btnAddProject' onclick='Vscrum.addToSelect("project","txtNewProject")' type='button') Add
             .form-group
                 label.col-md-4.control-label Yesterday's Work
                 .col-md-6
